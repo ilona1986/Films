@@ -1,1 +1,8 @@
-<p>saved-films works!</p>
+
+
+<div>saved-films works!</div>
+<div class="container">
+  <app-film *ngFor="let film of savedFilmsList"
+            [film]="film">
+  </app-film>
+</div>

@@ -11,4 +11,17 @@ export class TopFilmsService {
   getFilms() {
     return this.http.get('assets/movies.json');
   }
+
+  parseResponse(res: any) {
+    const {data} = res;
+    const {movies} = data;
+    return movies.map((item: any) => {
+      return {
+        id: item.idIMDB,
+        title: item.title,
+        trailer: item.trailer,
+        urlPoster: item.urlPoster
+      };
+    });
+  }
 }
