@@ -4,6 +4,7 @@ import { TopFilmsComponent } from './top-films/top-films.component';
 import {TopFilmsRoutingModule} from "./top-films-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import {TopFilmsService} from "./top-films/top-films.service";
+import {SharedModule} from "../shared/shared.module";
 
 
 
@@ -14,7 +15,8 @@ import {TopFilmsService} from "./top-films/top-films.service";
   imports: [
     CommonModule,
     TopFilmsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
   ],
   providers: [
     TopFilmsService
